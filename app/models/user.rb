@@ -8,11 +8,11 @@ class User
 	property :name, String
 	property :email, String, :unique => true, :message => "Email is already registered"
 	property :user_name, String, :unique => true, :message => "Username has already been taken" 
-
 	property :password_digest, Text
 	# property :password_token, Text
 	# property :password_token_timestamp, Time
 
+	# has n, :clucks, :through => Resource
 	attr_reader :password
 	attr_accessor :password_confirmation
 	validates_confirmation_of :password, :message => "Ooops...your passwords do not match!"
@@ -36,5 +36,8 @@ class User
 		end
 	end
 
+	# def add_cluck message
+
+	# end
 
 end

@@ -57,7 +57,7 @@ post '/sessions' do
 		redirect '/'
 	else
 		flash.now[:notice] = "Email or password did not match"
-		erb:'sessions/new'
+		erb :'sessions/new'
 	end
 end
 
@@ -65,4 +65,13 @@ delete '/sessions' do
 	session[:user_id]=nil
 	flash[:notice] = "Goodbye!"
 	redirect '/'
+end
+
+get '/clucks/new' do
+	erb :'clucks/new'
+end
+
+post '/clucks' do
+	new_cluck=params[:new_cluck]
+
 end

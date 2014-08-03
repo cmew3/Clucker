@@ -7,5 +7,6 @@ class Cluck
 	property :time, Time, :default => Time.now
 	property :mood, String, :default => "neutral"
 	has n, :tags, :through => Resource
+	# belongs_to :user
 
 end	
