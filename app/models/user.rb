@@ -12,7 +12,7 @@ class User
 	# property :password_token, Text
 	# property :password_token_timestamp, Time
 
-	# has n, :clucks, :through => Resource
+	has n, :clucks, :through => Resource
 	attr_reader :password
 	attr_accessor :password_confirmation
 	validates_confirmation_of :password, :message => "Ooops...your passwords do not match!"
@@ -34,10 +34,11 @@ class User
 		else
 			nil
 		end
+	end	
+
+	def add_cluck message
+		clucks << Cluck.create(text: message)
+		self.save
 	end
-
-	# def add_cluck message
-
-	# end
 
 end
