@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<% if current_user %>
+		Welcome, <%=current_user.user_name %>
+		<form id = 'sign-out' method='post' action='/sessions'>
+			<input type="hidden" name="_method" value="delete">
+			<input type="submit" id="sign-out" class="nav_links" value="Sign out">
+		</form>
+	<% end %>
+	<% @clucks.each do |cluck| %>
+	<%= cluck.text %>
+	<%= cluck.time %>
+	<% end %> 
+
+</body>
+</html>	
