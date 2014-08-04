@@ -14,7 +14,6 @@ feature 'viewing clucks' do
 	
 	scenario 'when viewing the homepage' do
 		Cluck.create(text: "Hello chickens", user: user)
-		User.first.save	
 		visit '/'
 		expect(page).to have_content("Hello chickens")
 	end
