@@ -3,6 +3,15 @@
 	<title></title>
 </head>
 <body>
+	<% if current_user %>
+		Welcome, <%=current_user.user_name %>
+		<form id = 'sign-out' method='post' action='/sessions'>
+			<input type="hidden" name="_method" value="delete">
+			<input type="submit" id="sign-out" class="nav_links" value="Sign out">
+		</form>
+	<a href="/clucks/new">New cluck!</a>
+	<% end %>
+	
 	<% if flash[:errors] && !flash[:errors].empty? %>
 	Sorry, there were the following problems with the form:
 	<ul id = "errors">

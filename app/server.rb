@@ -27,13 +27,12 @@ get '/users/new' do
 end
 
 post '/users' do
-	@user = User.create(name: params[:name],
+	@user = User.new(name: params[:name],
 			email: params[:email],
 			user_name: params[:user_name],
 			password: params[:password],
 			password_confirmation: params[:password_confirmation])
 	if @user.save
-		puts "user saved"
 		session[:user_id] = @user.id
 		redirect '/'
 	else

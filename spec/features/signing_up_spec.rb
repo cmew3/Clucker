@@ -1,7 +1,7 @@
 require 'spec_helper'
 require_relative 'helpers/session'
 
-feature 'In order to use chitter as a maker I want to sign up to the service' do
+feature 'In order to use clucker I want to sign up to the service' do
 
 	scenario 'when logged out' do
 		sign_up
@@ -10,7 +10,7 @@ feature 'In order to use chitter as a maker I want to sign up to the service' do
 	end
 
 	scenario 'with a password that does not match' do
-		sign_up('Sarah Bloggs', 'test@test2.com','tester2','password','wrongpassword')
+		sign_up('Sarah Bloggs', 'test2@test.com','tester2','password','wrongpassword')
 		expect(current_path).to eq('/users')
 		expect(page).to have_content("passwords do not match")
 	end

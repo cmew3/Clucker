@@ -3,17 +3,14 @@
 	<title></title>
 </head>
 <body>
-	<% if current_user %>
-		Welcome, <%=current_user.user_name %>
-		<form id = 'sign-out' method='post' action='/sessions'>
-			<input type="hidden" name="_method" value="delete">
-			<input type="submit" id="sign-out" class="nav_links" value="Sign out">
-		</form>
-	<% end %>
-	<a href="/clucks/new">New cluck!</a>
+
 	<% @clucks.each do |cluck| %>
+	<p>
 	<%= cluck.text %>
 	<%= cluck.time %>
+	<%= cluck.user.name %>
+	<%= cluck.user.user_name %>
+	</p>
 	<% end %> 
 
 </body>
