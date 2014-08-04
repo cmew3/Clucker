@@ -33,6 +33,7 @@ post '/users' do
 			password: params[:password],
 			password_confirmation: params[:password_confirmation])
 	if @user.save
+		puts "user saved"
 		session[:user_id] = @user.id
 		redirect '/'
 	else
@@ -73,5 +74,6 @@ end
 
 post '/clucks' do
 	new_cluck=params[:new_cluck]
-
+	current_user.add_cluck(new_cluck)
+	redirect '/'
 end

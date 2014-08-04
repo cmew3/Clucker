@@ -15,10 +15,6 @@ describe User do
 	end
 
 	it 'has unique email and username' do
-		# User.create(name: "Charlotte Kelly",
-		# 			email: "test@test.com",
-		# 			user_name: "cmew3"
-		# 			)
 		expect(User.count).to eq 1
 		User.create(name: "Chris Kelly",
 					email: "test@test.com",
