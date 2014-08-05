@@ -97,3 +97,8 @@ RSpec.configure do |config|
   end
 =end
 end
+
+def reload(resource)
+  resource.class.get(resource.id)
+end
+
