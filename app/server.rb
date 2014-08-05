@@ -12,7 +12,7 @@ set :session_secret, 'super secret'
 use Rack::Flash
 
 get '/' do
-	@clucks = Cluck.all
+	@clucks = Cluck.all.reverse
 	erb :index
 end
 

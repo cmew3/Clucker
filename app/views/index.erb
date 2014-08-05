@@ -8,8 +8,8 @@
 	<p>
 	<%= cluck.text %>
 	<%= cluck.time %>
-	<%= cluck.user.name %>
-	<%= cluck.user.user_name %>
+	<%= User.get(cluck.user_id).name %>
+	<%= User.get(cluck.user_id).user_name %>
 	</p>
 	<% end %> 
 
