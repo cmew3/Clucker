@@ -23,8 +23,17 @@ feature 'In order to let people know what I am doing I want to post a message to
 		expect(page).not_to have_content "New cluck!"
 	end
 
-	def add_new_cluck message
+	scenario 'when adding tags' do
+		sign_in("tester","password")
+		click_link "New cluck!"
+		add_new_cluck("first cluck with tags",["greeting","tags"])
+		expect(page).to have_content "first cluck with tags"
+		expect(page).to have_content "greeting"
+	end	
+
+	def add_new_cluck message, tags = []
 		fill_in :new_cluck, :with => message
+		fill_in :tags, :with => tags.join(" ")
 		click_button "Cluck!"
 	end
 

@@ -8,6 +8,9 @@
 	<p>
 	<%= cluck.text %>
 	<%= cluck.time %>
+	<% cluck.tags.each do |tag| %>
+		<%= tag.text %>
+	<% end %>
 	<%= User.get(cluck.user_id).name %>
 	<%= User.get(cluck.user_id).user_name %>
 	</p>

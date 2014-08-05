@@ -36,8 +36,8 @@ class User
 		end
 	end	
 
-	def add_cluck message
-		clucks << Cluck.create(text: message, user: self)
+	def add_cluck(message,tags=[])
+		clucks << Cluck.create(text: message, user: self, tags: tags)
 		self.save
 	end
 
