@@ -1,0 +1,77 @@
+body {
+	background-color: white;
+	font-family: 'Shadows Into Light', cursive;	
+}
+
+header {
+	background-color: orange;
+	color: blue;
+	position: fixed;
+	width:100%;
+	box-shadow: 2px 2px 2px;
+	padding-top: 0;
+	padding-bottom: 0px;
+	padding-left: 40px;
+	margin-top: -15px;
+	margin-left: -10px;
+	margin-right: -10px;	
+}
+
+#title {
+width: 40%;
+font-size: 70px;
+font-variant: bold;	
+padding-left: 60px;	
+float: left;	
+
+}
+
+#tag-line {
+	color: white;
+	text-align: right;
+	float: right;
+	margin-right: 180px;
+	vertical-align: baseline;
+	margin-top: 60px;
+	width:30%	;
+	font-size: 24;	
+}
+
+#sign-out {
+	float: right;
+	margin-right: 25px;
+	vertical-align: baseline;
+	margin-top: -21px;
+	width:30%	;
+}
+
+#sign-out-button {
+	border-radius: 4px;
+
+
+}
+
+.button {
+	background-color:#FF9900;
+	-moz-border-radius:19px;
+	-webkit-border-radius:19px;
+	border-radius:19px;
+	border:2px solid #E68A00;
+	display:inline-block;
+	cursor:pointer;
+	font-family: 'Shadows Into Light', cursive;	
+	color:#ffffff;
+	font-size:19px;
+	padding:1px 16px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #2f6627;
+}
+.button:hover {
+	background-color:blue;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+

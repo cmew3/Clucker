@@ -1,5 +1,4 @@
 
-
 def create_link password_token
 	"#{request.url.to_s}/#{password_token.to_s}"
 end

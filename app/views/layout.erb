@@ -1,15 +1,27 @@
 <html>
 <head>
-	<title></title>
+	<link type="text/css" href="/css/styles.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
 </head>
 <body>
+<header>
+</div id="header">
+	<div id="title">	Clucker</div>
 	<% if current_user %>
-		Welcome, <%=current_user.user_name %>
+	<div id="tag-line">Welcome, <%=current_user.user_name %></div>
+	<div id="sign-out">
 		<form id = 'sign-out' method='post' action='/sessions'>
 			<input type="hidden" name="_method" value="delete">
-			<input type="submit" id="sign-out" class="nav_links" value="Sign out">
+			<input type="submit" class ="button" id="sign-out-button" class="nav_links" value="Sign out">
 		</form>
+	</div>
+</div>
+</header>
 	<a href="/clucks/new">New cluck!</a>
+	<% else %>
+	<div id="sign-up"><a class = "button" href = "/users/new">Sign Up</a></div>
+	<div id="sign-in"><a class = "button" href = "/sessions/new">Sign In</a></div>
+	</div>
 	<% end %>
 	
 	<%= partial :flash%>
