@@ -327,8 +327,8 @@ padding-top: 20px;
   color: white;
   width: 500px;
   opacity: 0.8;
-  margin-top: 155px;
-	margin-bottom: -80px;
+  margin-bottom: -80px;
+
 }
 
 #flash-notice {
@@ -341,6 +341,7 @@ padding-top: 20px;
   color: white;
   width: 500px;
   opacity: 0.7;
+  margin-top: 155px;
 
 }
 
