@@ -11,8 +11,8 @@ feature 'requesting a password reset' do
 
 	scenario 'when user has forgotten password' do
 		visit '/sessions/new'
-		click_link 'Forgotten password'
-		expect(page).to have_content("Please enter your email address")
+		click_link 'Forgotten password?'
+		expect(page).to have_content("Password reset")
 		fill_in_email('test@test.com')
 		expect(page).to have_content("A link to reset you password will be sent to your email shortly")
 	end
@@ -37,7 +37,7 @@ feature 'setting a new password' do
 
 	scenario 'when user follows the email link and enters valid password' do
 		visit '/users/reset_password/ABCDEFGHIJKLMNO'
-		expect(page).to have_content("please enter a new password")
+		expect(page).to have_content("Enter a new password")
 		fill_in_new_password("new_password","new_password")
 		expect(page).to have_content("Welcome, tester")
 	end

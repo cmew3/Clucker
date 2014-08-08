@@ -28,8 +28,13 @@
 
 <section id="page_body">
 	<% if current_user %>
-		<a href="/clucks/new">New cluck!</a>
+		<a id = "chicken-link" href="/clucks/new"><img id ="new-cluck-image" src="/images/small_yellow_chicken.png"></a>
+		<a id ="add-cluck" class="button" href="/clucks/new">New cluck!</a>
 	<% end %>
+
+
+
+
 	<%= partial :flash%>
 
 	<%=yield%>

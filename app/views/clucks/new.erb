@@ -3,15 +3,18 @@
 	<title></title>
 </head>
 <body>
+  <section class="input_form">
+    <h1 class="form_header">Cluck new message!</h1>
 	<form action ='/clucks' method ="post">
 		  <p>
-    <input type="text" name='new_cluck' placeholder="Cluck your message here...">
-    <input type="text" name='tags' placeholder="Add any tags here...">
+    <textarea rows="5" cols="30" id="new-message" type="text" name='new_cluck' placeholder="Enter your message here..."></textarea>
+    <textarea rows="2" cols="30" id="new-message" type="text" name='tags' placeholder="Add any tags here..."></textarea>
   </p>
 
   <p>
     <input type="submit" value="Cluck!" class="button">
   </p>
 	</form> 
+</section>
 </body>
 </html>

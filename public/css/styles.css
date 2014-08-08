@@ -1,6 +1,6 @@
 body {
 	background-color: white;
-	font-family: 'Overlock', cursive;
+	font-family: 'Overlock', Helvetica;
 	color: #4d00ff;
 
 }
@@ -36,7 +36,7 @@ padding-left: 15px;
 float: left;	
 line-height: 70px;
 margin-top: 33px;
-font-family: 'Shadows Into Light', cursive;	
+font-family: 'Shadows Into Light', Helvetica;	
 
 }
 
@@ -64,7 +64,7 @@ a:visited {
 	vertical-align: baseline;
 	margin-top: 60px;
 	width:30%	;
-	font-size: 24;	
+	font-size: 18;	
 }
 
 #sign-out{
@@ -106,10 +106,9 @@ a:visited {
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-size:14px;
-	padding:5px 16px;
+	font-size:16px;
+	padding:7px 23px;
 	text-decoration:none;
-	text-shadow:1px 1px 0px #2f6627;
 	margin-top: 24px;
 
 }
@@ -122,20 +121,109 @@ a:visited {
 }
 
 #page_body {
-	margin-top: 160px;
+	margin-top: 125px;
 }
 
-section {
+#add-cluck {
+	float: right;
+
+}
+
+#new-cluck-image {
+	float:right;
+	margin-right: 25px;
+	margin-top: 20px
+}
+#chicken-link:hover {
+	float:right;
+	margin-right: 15px;
+	margin-top: -14px;
+}
+
+section#clucks-container {
+  width: 800px;
+  margin-top: 160;
+  padding:40px 30px 30px 30px;
+  margin: 60px auto;
+  text-align: center;
+  border-radius: 5px;
+
+}
+ul {
+	list-style: none;
+}
+
+ul > * {
+	position: float;
+}
+.clucks {
+	  border-style: solid;
+  border-radius: 8px;
+  border-color: #FFCC00;
+    padding: 10px;
+    margin: 15px;
+      background: #fffed1;
+      postion: relative;
+}
+.cluck-picture {
+	float: left;
+	width: 12%;
+}
+
+.cluck-time {
+	float: right;
+	float: top;
+	color: #FF9900;
+	color: #3498db	;
+}
+
+.cluck-user {
+	float: left;
+	margin-left: 15px;
+	color: #FF9900;
+	color: #3498db	;
+}
+
+.cluck-text{
+	margin-top: 15px;
+	float: left;
+
+	margin-left: 50px;
+	font-size: 18px;
+	color: #FF9900;
+	position: absolute;
+margin-left: 100px;
+margin-top: 40px;
+width: 40%;
+text-align: left;
+}
+
+.tag-container {
+
+	float: right;
+	clear: both;
+	color: #FF9900;
+	color: #3498db	;
+
+}
+
+.user-name {
+	margin-left: 10px
+	color: #3498db	;
+}
+
+section.input_form {
   width: 275px;
   background: #fffed1;
   padding: 0 30px 30px 30px;
   margin: 60px auto;
   text-align: center;
   border-radius: 5px;
+  margin-top: 160px;
 }
 
-section#page_body {
-	width: 800px;
+#new-message {
+
 }
 
 
@@ -155,6 +243,20 @@ input {
   text-align: center;
   font-size: 14px;
   color: #7f8c8d;
+
+}
+
+textarea {
+  width: 100%;
+  background: white;
+  border: none;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  color: #7f8c8d;
+  text-align: left
+
 }
 
 input:focus {
@@ -187,8 +289,8 @@ h2 {
 }
 
 a.form_link {
-  color: #FFCC00;
   text-decoration: none;
+  color: #FFCC00;
   transition: all ease-in-out .2s;
 }
 
@@ -201,4 +303,95 @@ margin-top: 20px;
 padding-top: 20px;
 }
 
+#notice {
+  text-align: center;
+  margin: 5px auto;
+  padding: 5px;
+  background-color: #FF9900;
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.4);
+  color: white;
+  width: 500px;
+  opacity: 0.8;
+    margin-top: 155px;
+ margin-bottom: -80px;
+}
 
+#errors {
+  text-align: center;
+  margin: 5px auto;
+  padding: 5px;
+  background-color: #FF9900;
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.4);
+  color: white;
+  width: 500px;
+  opacity: 0.8;
+  margin-top: 155px;
+	margin-bottom: -80px;
+}
+
+#flash-notice {
+  text-align: center;
+  margin: 5px auto;
+  padding: 5px;
+  background-color: #3498db;
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.4);
+  color: white;
+  width: 500px;
+  opacity: 0.7;
+
+}
+
+#tag_filter_input {
+	width: 231px;
+background: #fffed1;
+padding: 10;
+margin: 10;
+text-align: left;
+border-radius: 5px;
+margin-top: 25px;
+margin-left: 25px;
+
+
+}
+
+
+
+#filter_form_header {
+	padding: 2px;
+	margin: 2px;
+	font-size: 18px
+}
+
+#filter_button {
+	width: 60%;
+	padding: 2px;
+	margin: 6px;
+	margin-left: 40px;
+
+}
+
+select {
+   width: 180px;
+   overflow: hidden;
+   background: url(/images/down_arrow_select.jpg) no-repeat right #ddd;
+   border: 1px solid #ccc;
+   padding: 5px 8px;
+   font-size: 16px;
+   border: 0;
+   border-radius: 0;
+   -webkit-appearance: none;
+   color: white;
+   margin: 5px;
+   margin-bottom: 5px;
+   }
+
+#left {
+	float: left;
+}
+
+#filter_form{
+	margin:0px;
+}
