@@ -4,47 +4,8 @@
 </head>
 <body>
 
-		<aside id="left">
-		<section class="input_form" id = "tag_filter_input" >
-		<h1 class="form_header" id="filter_form_header">Filter by tag:</h1>
-		<form id ="filter_form" action="/tags" method = post>
-			<select name = "tag_filter">
-				<option value="none">No filter</option>
-				<% @tags.each do |tag| %>
-				<option value="<%=tag.text%>"><%=tag.text%></option>
-				<% end %>
-			<input class="button" id="filter_button" type="submit" value="Filter clucks">
-		</form>
-		</section>
-	</aside>
-	
-	<section id="clucks-container">
-		<ul id = "clucks">
-			<% @clucks.each do |cluck| %>
-			<div>
-			<li class="clucks">
-				<img class="cluck-picture" src ="/images/small_yellow_chicken.png">
-				<div class="cluck-user">
-					<%= User.get(cluck.user_id).name %> --
-					<%= User.get(cluck.user_id).user_name %>    
-				</div>
-				<div class = "cluck-time">
-					<%= cluck.time.strftime("%A %e %B %Y -- %l %M %p") %>
-				</div>
-				<div class="cluck-text">
-					<%= cluck.text %>
-				</div>
-				<div class = "tag-container">
-					<% cluck.tags.each do |tag| %>
-						<%= tag.text %>
-					<% end %>
-				</div>
-				<br style="clear: both">
-			</li>
-		</div>
-			<% end %> 
-		</ul>
-	</section>
+	<%= partial :clucks_filter%>
+	<%= partial :clucks_list%>
 
 </body>
 </html>	

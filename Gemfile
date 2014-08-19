@@ -7,6 +7,7 @@ gem 'bcrypt-ruby'
 gem 'rack-flash3'
 gem 'rest-client'
 gem 'sinatra-partial'
+gem 'pg'
 
 
 

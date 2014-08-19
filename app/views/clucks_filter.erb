@@ -1,0 +1,13 @@
+<aside id="left">
+	<section class="input_form" id = "tag_filter_input" >
+	<h1 class="form_header" id="filter_form_header">Filter by tag:</h1>
+	<form id ="filter_form" action="/tags" method = post>
+		<select name = "tag_filter">
+			<option value="none">No filter</option>
+			<% @tags.each do |tag| %>
+			<option value="<%=tag.text%>"><%=tag.text%></option>
+			<% end %>
+		<input class="button" id="filter_button" type="submit" value="Filter clucks">
+	</form>
+	</section>
+</aside>

@@ -1,0 +1,27 @@
+	<section id="clucks-container">
+		<ul id = "clucks">
+			<% @clucks.each do |cluck| %>
+			<div>
+			<li class="clucks">
+				<img class="cluck-picture" src ="/images/small_yellow_chicken.png">
+				<div class="cluck-user">
+					<%= User.get(cluck.user_id).name %> --
+					<%= User.get(cluck.user_id).user_name %>    
+				</div>
+				<div class = "cluck-time">
+					<%= cluck.time.strftime("%A %e %B %Y -- %l %M %p") %>
+				</div>
+				<div class="cluck-text">
+					<%= cluck.text %>
+				</div>
+				<div class = "tag-container">
+					<% cluck.tags.each do |tag| %>
+						<%= tag.text %>
+					<% end %>
+				</div>
+				<br style="clear: both">
+			</li>
+		</div>
+			<% end %> 
+		</ul>
+	</section>
